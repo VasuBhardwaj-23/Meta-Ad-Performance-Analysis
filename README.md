@@ -1,122 +1,122 @@
-# 📊 Meta Ad Performance Dashboard (Power BI)
+<div align="center">
 
-An interactive, end-to-end business intelligence dashboard built in Microsoft Power BI to evaluate and optimize Meta (Facebook & Instagram) paid advertising campaigns across 400,000+ ad event interactions.
+# 📊 Meta Ad Performance Dashboard
 
----
+## End-to-End Business Intelligence & Marketing Analytics Project
 
-## 📌 Executive Summary & Objective
+**Transforming 400,000+ multi-platform advertising event interactions into actionable marketing insights using Power BI, Power Query, Star Schema Data Modeling & DAX**
 
-Modern digital marketing teams manage large budgets across multi-channel platforms. Without granular performance visibility, ad spend is often wasted on low-converting audiences and suboptimal ad formats. 
+![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Power Query](https://img.shields.io/badge/Power_Query-ETL-0F9D58?style=for-the-badge)
+![DAX](https://img.shields.io/badge/DAX-Calculations-6A1B9A?style=for-the-badge)
+![Data Modeling](https://img.shields.io/badge/Data_Modeling-Star_Schema-1E88E5?style=for-the-badge)
+![Digital Marketing](https://img.shields.io/badge/Domain-Performance_Marketing-0081FB?style=for-the-badge&logo=meta&logoColor=white)
 
-### **Primary Objectives:**
-- **Performance Evaluation:** Track macro advertising volume (**Impressions, Clicks, Engagements, Purchases**) across Facebook and Instagram.
-- **Funnel Conversion Analysis:** Measure efficiency ratios (**CTR, Engagement Rate, Conversion Rate, Purchase Rate**) to detect funnel drop-offs.
-- **Budget & Resource Optimization:** Analyze campaign budget distributions against acquisition performance to guide budget allocation.
-- **Audience & Creative Diagnostics:** Uncover high-performing demographics, geographic regions, ad placements, and peak interaction times.
+</div>
 
----
-
-## 📸 Dashboard Previews
-
-### 1. Facebook Performance View
-![Facebook Dashboard](Images/dashboard_facebook.png)
-
-### 2. Instagram Performance View
-![Instagram Dashboard](Images/dashboard_instagram.png)
+> **Note:** This project is built using a comprehensive Meta advertising performance dataset representing real-world digital marketing campaigns across Facebook and Instagram from **7 May 2025 to 6 August 2025**.
 
 ---
 
-## 🛠️ Tech Stack & Skills Demonstrated
+# 📊 Project Overview
 
-- **Business Intelligence:** Microsoft Power BI Desktop
-- **ETL & Data Cleaning:** Power Query (M Language)
-- **Data Modeling:** Star Schema (Fact & Dimension Tables, One-to-Many Relationships)
-- **Analytics & Calculations:** Advanced DAX (Data Analysis Expressions, Field Parameters, Time-Intelligence)
-- **Data Source:** Meta Ad Event Logs (CSV, May – August 2025)
+This project presents an end-to-end Business Intelligence solution developed to evaluate, analyze, and optimize digital ad performance across Meta platforms (**Facebook & Instagram**).
 
----
+The project covers the entire data lifecycle: from raw multi-table ingestion and Power Query ETL transformations to building an optimized dimensional Star Schema, calculating advanced DAX metrics, implementing dynamic measure selectors, and designing an interactive dual-view executive dashboard.
 
-## 🧱 Data Architecture & Modeling
-
-The project follows an optimized **Star Schema** architecture centered around user-ad interaction events:
-
-```
-          [Dim_Campaigns]
-                 │ (1:N)
-          [Dim_Ads]
-                 │ (1:N)
-[Dim_Users] ─── (1:N) ─── [Fact_Ad_Events] ─── (N:1) ─── [Dim_Calendar]
-```
-
-### **Table Dictionary:**
-1. **`ad_events` (Fact Table - 400,000 Rows):** Granular user interactions recording `event_id`, `ad_id`, `user_id`, `timestamp`, and `event_type` (`Impression`, `Click`, `Purchase`, `Comment`, `Share`, `Like`).
-2. **`campaigns` (Dimension Table):** Contains `campaign_id`, `name`, `start_date`, `end_date`, `duration_days`, and `total_budget` ($2.5M total budget tracked).
-3. **`ads` (Dimension Table):** Attributes for each creative including `ad_id`, `ad_platform` (*Facebook*, *Instagram*), `ad_type` (*Carousel*, *Image*, *Stories*, *Video*), and target demographics.
-4. **`users` (Dimension Table):** Demographics including `user_id`, `user_age`, `age_group`, `user_gender`, `country`, and interests.
-5. **`Calendar Table` & `Dynamic Measure Selector`:** Disconnected parameter and date dimension tables supporting dynamic slicers and continuous time series.
+The dashboard delivers granular visibility into ad reach, funnel conversion drop-offs, demographic engagement patterns, ad creative effectiveness, and campaign budget utilization across 400,000 tracked interaction events.
 
 ---
 
-## 📐 Key DAX Measures & Formulas
+# 💼 Business Problem
 
-### 1. Performance Ratio Measures
-- **Click-Through Rate (CTR):**
-  $$\text{CTR} = \frac{\text{Total Clicks}}{\text{Total Impressions}} \times 100$$
-- **Engagement Rate (ER):**
-  $$\text{Engagement Rate} = \frac{\text{Clicks} + \text{Shares} + \text{Comments}}{\text{Total Impressions}} \times 100$$
-- **Conversion Rate (CR - Bottom of Funnel):**
-  $$\text{Conversion Rate} = \frac{\text{Total Purchases}}{\text{Total Clicks}} \times 100$$
-- **Purchase Rate (PR - Full Funnel Efficiency):**
-  $$\text{Purchase Rate} = \frac{\text{Total Purchases}}{\text{Total Impressions}} \times 100$$
+Modern digital marketing teams manage substantial paid media budgets across fragmented platforms and creative formats. Without granular performance visibility:
+- Ad budgets are frequently exhausted on underperforming creatives and low-intent audience segments.
+- Teams struggle to isolate top-of-funnel reach efficiency (CTR) from bottom-of-funnel purchase conversions (CR).
+- Media buyers lack clear visibility into peak user engagement hours, leading to sub-optimal ad delivery scheduling and high ad fatigue.
 
-### 2. Dynamic Metric Switching (DAX Example)
-```dax
-Selected_Metric = 
-SWITCH(
-    SELECTEDVALUE('Select Dynamic Measure'[MeasureName], "Impressions"),
-    "Impressions", [Total Impressions],
-    "Clicks", [Total Clicks],
-    "Purchases", [Total Purchases],
-    "Engagements", [Total Engagements],
-    [Total Impressions]
-)
-```
+This project delivers a centralized Business Intelligence solution to monitor volume metrics, conversion efficiency, creative fatigue, and audience behavior across **50 campaigns, 200 distinct ads, and 9,841 unique targeted users**.
 
 ---
 
-## 💡 Key Business Insights
+# 🎯 Project Objectives
 
-| Metric / Dimension | Facebook | Instagram | Key Takeaway |
-| :--- | :--- | :--- | :--- |
-| **Impressions** | 216.0K | 123.8K | Facebook captures ~63.5% of total ad exposure. |
-| **Clicks** | 25.4K | 14.7K | High link click volume across both channels. |
-| **Purchases** | 1,323 | 708 | Facebook drove ~65% of total verified sales. |
-| **CTR** | 11.76% | 11.86% | Instagram leads slightly in link click intent. |
-| **Conversion Rate** | 5.21% | 4.82% | Facebook landing page traffic converts 8% higher into buyers. |
-
-- **Top Ad Formats:** **Stories** deliver the highest exposure and CTR across both platforms, while **Video & Carousel** generate strong middle-funnel engagements.
-- **Demographics:** The **18–34 age bracket** drives over 60% of total conversions; performance drops sharply past age 45.
-- **Time Optimization:** Engagement peaks during afternoon and late evening hours; early morning hours (2 AM – 6 AM) show heavy drop-offs, indicating clear opportunity for dayparting schedule optimization.
+- Design an end-to-end Marketing Business Intelligence workflow in Power BI.
+- Clean, profile, and transform multi-table transactional event logs using Power Query.
+- Architect an optimized Star Schema data model for scalable analytical reporting.
+- Formulate standardized DAX KPIs including CTR, Engagement Rate, Conversion Rate, and Purchase Rate.
+- Implement **Dynamic Measure Selection** via DAX parameters to allow cross-visual metric exploration without visual clutter.
+- Develop dedicated interactive dashboards for **Facebook** and **Instagram** performance.
+- Extract data-backed recommendations to optimize paid ad spend and dayparting strategies.
 
 ---
 
-## 🚀 How to Run Locally
+# ⭐ Project Highlights
 
-1. **Clone this repository:**
-   ```bash
-   git clone [https://github.com/](https://github.com/)<your-username>/Meta-Ad-Performance-Analysis.git
-   ```
-2. Open **Power BI Desktop**.
-3. Open `Meta Ad Performance Analysis.pbix`.
-4. If a data source prompt appears:
-   - Go to **Transform Data** > **Data source settings**.
-   - Click **Change Source...** and browse to the CSV files inside the `Raw Data/` folder.
-   - Click **Close & Apply**.
+- Multi-Table Relational Architecture (Fact & Dimension Tables)
+- Comprehensive Power Query Data Cleaning & Type Formatting
+- Star Schema Dimensional Modeling
+- Advanced DAX Ratios & Disconnected Slicer Parameters
+- Dynamic Visual Titles & Automated Format Switching
+- Granular Funnel Diagnostics (Impressions ➔ Clicks ➔ Engagements ➔ Purchases)
+- Time-Intelligence Trends (Monthly, Weekly, and Hourly Dayparting Curves)
+- Demographic & Geographic Segmentation (Age, Gender, Country)
 
 ---
 
-## 👤 Author & Acknowledgments
+# 🛠️️ Technology Stack
 
-- **Author:** Vasu Bhardwaj
-- **Domain:** Data Analytics & Performance Marketing Intelligence
-- **Portfolio / Contact:** [LinkedIn Profile URL] | [Email Address]
+| Category | Technology |
+|---|---|
+| **Business Intelligence** | Microsoft Power BI Desktop |
+| **ETL & Data Cleaning** | Power Query (M Language) |
+| **Data Modeling** | Star Schema (1:N Single-Direction Relationships) |
+| **Analytical Calculations** | Advanced DAX (Data Analysis Expressions) |
+| **Data Sources** | Relational CSV Event Logs (400,000 Records) |
+
+---
+
+# 📂 Dataset Overview
+
+The project utilizes a structured relational marketing dataset capturing user-level ad interactions and campaign metadata.
+
+## Coverage Summary
+
+| Attribute | Details |
+|---|---|
+| **Dataset Type** | Paid Advertising Interaction Event Logs |
+| **Time Period** | 7 May 2025 – 6 August 2025 (Active 4 Months) |
+| **Platforms Covered** | Facebook & Instagram |
+| **Creative Formats** | Carousel, Image, Stories, Video |
+| **Total Tracked Budget** | $2,535,923.78 (~$2.5M) |
+
+## Dataset Statistics
+
+| Dataset Table | Role | Records | Description |
+|---|---|---:|---|
+| **`ad_events`** | Fact Table | 400,000 | Granular events (Impressions, Clicks, Likes, Comments, Shares, Purchases) |
+| **`campaigns`** | Dimension Table | 50 | Campaign metadata, start/end dates, duration, and allocated budgets |
+| **`ads`** | Dimension Table | 200 | Creative ID, platform, ad type, and demographic targeting rules |
+| **`users`** | Dimension Table | 9,841 | User demographic profiles, age, gender, country, and interest tags |
+
+---
+
+# 🔄 End-to-End Workflow
+
+```text
+Raw Marketing CSV Datasets (4 Tables)
+                │
+                ▼
+Power Query ETL (Data Cleaning, Types, Handling Blanks)
+                │
+                ▼
+Star Schema Data Model (1:N Relational Integrity)
+                │
+                ▼
+DAX Measure Engineering & Dynamic Slicers
+                │
+                ▼
+Interactive Multi-Page Power BI Dashboard
+                │
+                ▼
+Executive Insights & Media Spend Recommendations
