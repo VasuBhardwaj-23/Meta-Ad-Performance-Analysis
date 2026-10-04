@@ -147,7 +147,7 @@ The following quantified metrics summarize overall performance across the 400,00
 
 ## Facebook Performance Dashboard
 
-![Facebook Dashboard](Images/01_Facebook_Performance.png)
+![Facebook Dashboard](Images/dashboard_facebook.png)
 
 Comprehensive dashboard page providing end-to-end visibility into Facebook ad spend, demographic distributions (Age & Gender), country-level reach, weekly/hourly performance trends, and ad format efficiency.
 
@@ -155,7 +155,7 @@ Comprehensive dashboard page providing end-to-end visibility into Facebook ad sp
 
 ## Instagram Performance Dashboard
 
-![Instagram Dashboard](Images/02_Instagram_Performance.png)
+![Instagram Dashboard](Images/dashboard_instagram.png)
 
 Dedicated Instagram analytics view highlighting comparative CTR, engagement metrics, format level diagnostics (Stories, Video, Carousel, Image), dynamic measure filtering, and hourly activity peaks.
 
