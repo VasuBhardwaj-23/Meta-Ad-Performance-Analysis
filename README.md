@@ -64,7 +64,7 @@ This project delivers a centralized Business Intelligence solution to monitor vo
 
 ---
 
-# 🛠️️ Technology Stack
+# 🛠 Technology Stack
 
 | Category | Technology |
 |---|---|
@@ -120,3 +120,135 @@ Interactive Multi-Page Power BI Dashboard
                 │
                 ▼
 Executive Insights & Media Spend Recommendations
+```
+
+---
+
+# 📈 Key Performance Indicators
+
+The following quantified metrics summarize overall performance across the 400,000 event interactions:
+
+| Metric | Facebook Performance | Instagram Performance | Combined / Overall |
+|---|---:|---:|---:|
+| **Total Impressions** | 215,972 (216.0K) | 123,840 (123.8K) | **339,812** |
+| **Total Clicks** | 25,389 (25.4K) | 14,690 (14.7K) | **40,079** |
+| **Total Purchases** | 1,323 (1.3K) | 708 (708.0) | **2,031** |
+| **Total Engagements** | 29,296 (29.3K) | 16,848 (16.8K) | **46,144** |
+| **Click-Through Rate (CTR)** | 11.76% | 11.86% | **11.79%** |
+| **Engagement Rate (ER)** | 13.56% | 13.60% | **13.58%** |
+| **Conversion Rate (CR)** | 5.21% | 4.82% | **5.07%** |
+| **Purchase Rate (PR)** | 0.61% | 0.57% | **0.60%** |
+| **Total Campaign Budget** | — | — | **$2.54M** |
+| **Average Campaign Budget** | — | — | **$50.72K** |
+
+---
+
+# 📸 Dashboard Preview
+
+## Facebook Performance Dashboard
+
+![Facebook Dashboard](Images/01_Facebook_Performance.png)
+
+Comprehensive dashboard page providing end-to-end visibility into Facebook ad spend, demographic distributions (Age & Gender), country-level reach, weekly/hourly performance trends, and ad format efficiency.
+
+---
+
+## Instagram Performance Dashboard
+
+![Instagram Dashboard](Images/02_Instagram_Performance.png)
+
+Dedicated Instagram analytics view highlighting comparative CTR, engagement metrics, format level diagnostics (Stories, Video, Carousel, Image), dynamic measure filtering, and hourly activity peaks.
+
+---
+
+# 💡 Key Business Insights
+
+- **Platform Divergence:** Facebook acts as the core acquisition engine, driving **65.1% of total purchases (1,323)** with a superior **5.21% Conversion Rate**. Instagram functions as a high-intent discovery engine with a marginally higher **11.86% CTR**.
+- **Ad Creative Hierarchy:** **Stories** and **Video** formats generate the highest sustained engagement and purchase rates across both platforms, whereas static Images show lower relative conversion elasticity.
+- **Audience Concentration:** Over **60% of all ad conversions** stem from users aged **18–34**. Target audience responsiveness drops sharply past age 45, indicating significant ad spend leakage when targeting older brackets with broad creatives.
+- **Temporal Patterns & Dayparting:** Interaction trends exhibit strong afternoon and late-evening peaks (12 PM – 3 PM and 7 PM – 10 PM), with activity dropping to near zero between 2 AM and 6 AM.
+
+---
+
+# 📌 Strategic Recommendations
+
+- **Budget Reallocation:** Shift a higher proportion of direct-response conversion budgets to Facebook while leveraging Instagram primarily for Stories-driven top-of-funnel consideration.
+- **Implement Dayparting (Ad Scheduling):** Restrict automated ad delivery between 2 AM and 6 AM to conserve budget and redeploy spend during peak engagement windows (afternoon and evening).
+- **Format Modernization:** Transition lower-performing static single-image creatives into dynamic Carousel and short-form Video formats to improve overall CTR.
+- **Audience Curation:** Restructure age targeting parameters to focus the majority of ad sets on the 18–34 demographic, utilizing tailored value propositions for niche older segments.
+
+---
+
+# 📁 Repository Structure
+
+```text
+Meta-Ad-Performance-Analysis/
+│
+├── 📂 Dashboard/
+│   └── Meta Ad Performance Analysis.pbix
+│       • Interactive Power BI report with dynamic measures and dual platform views
+│
+├── 📂 Raw Data/
+│   ├── ad_events.csv        • 400,000 granular ad interaction logs
+│   ├── ads.csv              • 200 ad creative records and targeting criteria
+│   ├── campaigns.csv        • 50 campaign schedules and budget allocations
+│   └── users.csv            • 9,841 demographic user profiles
+│
+├── 📂 Images/
+│   ├── 01_Facebook_Performance.png
+│   ├── 02_Instagram_Performance.png
+│   ├── Facebook_Logo_2023.png
+│   └── Instagram_icon.png
+│       • High-resolution dashboard screenshots and platform assets
+│
+└── README.md
+    • Comprehensive project documentation
+```
+
+---
+
+# ▶️ Getting Started
+
+1. Clone this repository:
+   ```bash
+   git clone [https://github.com/](https://github.com/)<your-username>/Meta-Ad-Performance-Analysis.git
+   ```
+2. Open `Meta Ad Performance Analysis.pbix` using **Microsoft Power BI Desktop**.
+3. If prompted to update data source paths:
+   - Navigate to **Home** > **Transform Data** > **Data source settings**.
+   - Select **Change Source...** and browse to the corresponding CSV files in the `Raw Data/` folder.
+   - Click **Apply Changes**.
+4. Explore the interactive visuals, dynamic measure slicers, and platform toggles.
+
+---
+
+# 🔮 Future Enhancements
+
+- Integrate daily granular spend data to calculate dynamic **Cost Per Click (CPC)**, **Cost Per Acquisition (CPA)**, and **Return on Ad Spend (ROAS)**.
+- Implement Multi-Touch Attribution (MTA) modeling across cross-platform user journeys.
+- Connect live Meta Marketing Graph APIs for automated daily pipeline refreshes.
+- Build automated anomaly detection alerts for sudden CTR drops or ad fatigue.
+
+---
+
+# 👨‍💻 Author
+
+**Vasu Bhardwaj**
+
+**Aspiring Data Analyst | Power BI | DAX | SQL | Data Modeling | Business Intelligence**
+
+---
+
+# ⭐ Support
+
+If you found this project valuable or learned something from it, please consider giving this repository a **⭐ Star**. Your support helps increase the visibility of the project and motivates continued development of high-quality data analytics projects.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project helpful, consider giving it a Star!
+
+**Built with ❤️ by Vasu Bhardwaj**
+
+</div>
