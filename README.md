@@ -130,16 +130,18 @@ The following quantified metrics summarize overall performance across the 400,00
 
 | Metric | Facebook Performance | Instagram Performance | Combined / Overall |
 |---|---:|---:|---:|
-| **Total Impressions** | 215,972 (216.0K) | 123,840 (123.8K) | **339,812** |
-| **Total Clicks** | 25,389 (25.4K) | 14,690 (14.7K) | **40,079** |
-| **Total Purchases** | 1,323 (1.3K) | 708 (708.0) | **2,031** |
-| **Total Engagements** | 29,296 (29.3K) | 16,848 (16.8K) | **46,144** |
-| **Click-Through Rate (CTR)** | 11.76% | 11.86% | **11.79%** |
-| **Engagement Rate (ER)** | 13.56% | 13.60% | **13.58%** |
-| **Conversion Rate (CR)** | 5.21% | 4.82% | **5.07%** |
-| **Purchase Rate (PR)** | 0.61% | 0.57% | **0.60%** |
-| **Total Campaign Budget** | — | — | **$2.54M** |
-| **Average Campaign Budget** | — | — | **$50.72K** |
+| **Total Impressions** | 215,972 (216.0K)[cite: 6, 10] | 123,840 (123.8K)[cite: 7, 10] | **339,812**[cite: 10] |
+| **Total Clicks** | 25,389 (25.4K)[cite: 6, 10] | 14,690 (14.7K)[cite: 7, 10] | **40,079**[cite: 10] |
+| **Total Purchases** | 1,323 (1.3K)[cite: 6, 10] | 708 (708.0)[cite: 7, 10] | **2,031**[cite: 10] |
+| **Total Engagements** | 29,296 (29.3K)[cite: 6, 10] | 16,848 (16.8K)[cite: 7, 10] | **46,144**[cite: 10] |
+| **Click-Through Rate (CTR)** | 11.76%[cite: 6, 10] | 11.86%[cite: 7, 10] | **11.79%**[cite: 10] |
+| **Engagement Rate (ER)** | 13.56%[cite: 6, 10] | 13.60%[cite: 7, 10] | **13.58%**[cite: 10] |
+| **Conversion Rate (CR)** | 5.21%[cite: 6, 10] | 4.82%[cite: 7, 10] | **5.07%**[cite: 10] |
+| **Purchase Rate (PR)** | 0.61%[cite: 6, 10] | 0.57%[cite: 7, 10] | **0.60%**[cite: 10] |
+| **Total Campaign Budget** | $2.54M[cite: 6] | $2.54M[cite: 7] | **$2.54M**[cite: 10] |
+| **Average Campaign Budget** | $50.72K[cite: 6] | $50.72K[cite: 7] | **$50.72K**[cite: 10] |
+
+> **Methodology Note on Campaign Budget Allocation:** Total Campaign Budget ($2.54M) and Average Campaign Budget ($50.72K) are defined at the root campaign tier within `campaigns.csv`. Because individual campaigns execute integrated ad sets concurrently across Facebook and Instagram placements, the aggregate portfolio budget is monitored uniformly across both platform views to maintain cross-channel visibility.
 
 ---
 
